@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display</title>
+</head>
+<body>
+    <h1>Data Display</h1>
+    
+    <form method="post" action="/">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Add Data</button>
+    </form>
+
+    <ul>
+        {% for entry in data %}
+            <li>{{ entry.username }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

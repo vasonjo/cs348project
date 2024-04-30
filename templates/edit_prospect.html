@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Prospect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .prospect-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="prospect-info">
+        <h2>Editing Prospect</h2>
+        <p>Name: {{ prospect.name }}</p>
+        <p>High School: {{ prospect.highschool.name }}</p>
+        <p>Current Overall: {{ prospect.overall }}</p>
+        <p>Current Potential: {{ prospect.potential }}</p>
+    </div>
+    <form action="" method="post">
+        <label for="overall">Overall:</label>
+        <input type="text" id="overall" name="overall" value="{{ prospect.overall }}"><br>
+        
+        <label for="potential">Potential:</label>
+        <input type="text" id="potential" name="potential" value="{{ prospect.potential }}"><br>
+        
+        <input type="submit" value="Update Prospect">
+    </form>
+</body>
+</html>
